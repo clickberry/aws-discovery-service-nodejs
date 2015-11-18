@@ -35,7 +35,7 @@ Add to yuor container definition
                 },
                 {
                     "name": "HOSTNAME",
-                    "value": "test-mpngo"
+                    "value": "test-mongo"
                 },
                 {
                     "name": "DOMAINNAME",
