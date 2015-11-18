@@ -1,6 +1,6 @@
 {
   "name": "aws-discovery-service-nodejs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "worker.js",
   "description": "AWS discovery micro-service on Node.js",
   "scripts": {

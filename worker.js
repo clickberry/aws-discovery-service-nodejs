@@ -1,6 +1,10 @@
 var config = require('./config');
 var AWS = require('aws-sdk');
 
+AWS.config = new AWS.Config({
+    region: config.get('region')
+});
+
 var route53 = new AWS.Route53({apiVersion: '2013-04-01'});
 var ecs = new AWS.ECS({apiVersion: '2014-11-13'});
 var ec2 = new AWS.EC2({apiVersion: '2015-10-01'});
