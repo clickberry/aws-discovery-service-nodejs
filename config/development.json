@@ -1,0 +1,6 @@
+{
+  "clusterName": "qa",
+  "domainName": "db.io",
+  "serviceName": "auth-mongo",
+  "hostName": "auth-mongo"
+}
