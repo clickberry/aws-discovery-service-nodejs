@@ -3,6 +3,7 @@
 Add to yuor container definition
 ```
 {
+    "family": "qa-auth-mongo",
     "containerDefinitions": [
         {
             "name": "mongo",
