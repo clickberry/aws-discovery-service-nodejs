@@ -5,8 +5,10 @@ Add to yuor container definition
 "containerDefinitions": [
 ...,
 {
-    "memory": 100,
     "name": "service-discovery",
+    "image": "quay.io/clickberry/aws-discovery-service-nodejs:v0.0.1",
+    "cpu": 2
+    "memory": 100,
     "environment": [
         {
             "name": "CLUSTERNAME",
@@ -28,9 +30,7 @@ Add to yuor container definition
             "name": "REGION",
             "value": "us-west-1"
         }
-    ],
-    "image": "quay.io/clickberry/aws-discovery-service-nodejs:v0.0.1",
-    "cpu": 2
+    ]
   }
 ]
 ```
