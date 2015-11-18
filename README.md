@@ -1,1 +1,1 @@
-# likes-service-nodejs
+# aws-discovery-service-nodejs
