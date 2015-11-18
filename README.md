@@ -25,7 +25,7 @@ Add to yuor container definition
         {
             "name": "service-discovery",
             "image": "quay.io/clickberry/aws-discovery-service-nodejs:v0.0.1",
-            "cpu": 2
+            "cpu": 2,
             "memory": 100,
             "essential": false,
             "environment": [
