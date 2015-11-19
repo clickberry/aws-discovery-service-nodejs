@@ -1,6 +1,13 @@
 # aws-discovery-service-nodejs
 
-Add to yuor container definition
+## Description
+This service allow you link containers located on different instances in one VPC(Virtual Private Clouds) by their host name, whose automaticaly set A record to your hosted zone(by means AWS Route53).
+
+If container will restarting on another instance, then record also updates with new ip address, but with same host name.
+
+## Settings
+### Configure Task Definition
+Add to yuor "Task Definition" of your ecs application:
 ```
 {
     ...
@@ -45,7 +52,7 @@ Add to yuor container definition
 * *region* - region of your VPC (Virtual Private Clouds). *Ex. us-west-1*
 * *service_name* - name of your ecs service
 
-After executing discovery service, in your hosted zone will adding record A type:
+After executing discovery service, in your hosted zone will added record A type:
 
 *[host_name].[domain_name]* --- *[ip_address]*    
 * *ip_address* - ip address of instance where running your application
@@ -54,3 +61,26 @@ Example:
 
 *mongo.test.contoso.io --- 172.23.54.22*
 
+### Configure credentials
+The discovery service needs credentials for correct work. You should set instance policy:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ecs:ListTasks",
+                "ecs:DescribeTasks",
+                "ecs:DescribeContainerInstances",
+                "ec2:DescribeInstances",
+                "route53:ListHostedZonesByName",
+                "route53:ChangeResourceRecordSets"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
+```
