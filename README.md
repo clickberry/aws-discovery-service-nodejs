@@ -15,7 +15,7 @@ Add to yuor container definition
             "environment": [
                 {
                     "name": "CLUSTERNAME",
-                    "value": "*[cluster_name]*"
+                    "value": *"[cluster_name]"*
                 },
                 {
                     "name": "HOSTNAME",
