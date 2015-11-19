@@ -3,25 +3,9 @@
 Add to yuor container definition
 ```
 {
-    "family": "qa-auth-mongo",
+    ...
     "containerDefinitions": [
-        {
-            "name": "mongo",
-            "image": "mongo:3.1",
-            "cpu": 100,
-            "memory": 200,
-            "essential": true,
-            "portMappings": [
-                {
-                    "hostPort": 27017,
-                    "containerPort": 27017,
-                    "protocol": "tcp"
-                }
-            ],
-            "command": [
-                "--storageEngine=wiredTiger"
-            ]
-        },
+        ...
         {
             "name": "service-discovery",
             "image": "quay.io/clickberry/aws-discovery-service-nodejs:v0.0.1",
@@ -31,23 +15,23 @@ Add to yuor container definition
             "environment": [
                 {
                     "name": "CLUSTERNAME",
-                    "value": "qa"
+                    "value": "*[cluster_name]*"
                 },
                 {
                     "name": "HOSTNAME",
-                    "value": "test-mongo"
+                    "value": "*[host_name]*"
                 },
                 {
                     "name": "DOMAINNAME",
-                    "value": "db.io"
+                    "value": "*[domain_name]*"
                 },
                 {
                     "name": "SERVICENAME",
-                    "value": "test-mongo-service"
+                    "value": "*[service_name]*"
                 },
                 {
                     "name": "REGION",
-                    "value": "us-west-1"
+                    "value": "*[region]*"
                 }
             ]
       }
