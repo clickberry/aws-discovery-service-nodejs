@@ -49,5 +49,7 @@ Before executing discovery service, in your hosted zone will adding record A typ
 
 *[host_name].[domain_name]* --- *[ip_address]*    
 
-*Example: **mongo.test.contoso.io --- 172.23.54.22** *
+Example:
+
+*mongo.test.contoso.io --- 172.23.54.22*
 * *ip_address* - ip address of instance where running your application
