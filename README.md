@@ -46,6 +46,6 @@ Add to yuor container definition
 * *service_name* - name of your ecs service
 
 Before executing discovery service, in your hosted zone will adding record A type:
-*[host_name].[domain_name]* *[ip_address]*
 
-* *ip_address* - ip address of instance where running this application
+*[host_name].[domain_name]* *[ip_address]*
+* *ip_address* - ip address of instance where running your application
