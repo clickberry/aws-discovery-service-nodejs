@@ -45,7 +45,7 @@ Add to yuor container definition
 * *region* - region of your VPC (Virtual Private Clouds). *Ex. us-west-1*
 * *service_name* - name of your ecs service
 
-Before executing discovery service, in your hosted zone will adding record A type:
+After executing discovery service, in your hosted zone will adding record A type:
 
 *[host_name].[domain_name]* --- *[ip_address]*    
 * *ip_address* - ip address of instance where running your application
