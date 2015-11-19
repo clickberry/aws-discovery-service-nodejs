@@ -39,13 +39,13 @@ Add to yuor container definition
 }
 ```
 
-* *cluster_name* - name of your ecs cluster
-* *domain_name* - domain name of your private hosted zone
-* *host_name* - host name for your container application
-* *region* - region of your VPC (Virtual Private Clouds)
+* *cluster_name* - name of your ecs cluster.
+* *domain_name* - domain name of your private hosted zone. *Ex. *contoso.io**
+* *host_name* - host name for your container application. *Ex. *mongo.test**
+* *region* - region of your VPC (Virtual Private Clouds). *Ex. *us-west-1**
 * *service_name* - name of your ecs service
 
 Before executing discovery service, in your hosted zone will adding record A type:
 
-*[host_name].[domain_name]* *[ip_address]*
+*[host_name].[domain_name]* --- *[ip_address]*
 * *ip_address* - ip address of instance where running your application
