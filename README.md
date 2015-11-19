@@ -1,11 +1,14 @@
 # aws-discovery-service-nodejs
 
 ## Description
-This service allow you link containers located on different instances in one VPC(Virtual Private Clouds) by their host name, whose automaticaly set A record to your hosted zone(by means AWS Route53).
+This service allow you link containers located on different instances in one VPC(Virtual Private Clouds) by their host name, which automaticaly set A record to your private hosted zone(by means AWS Route53).
 
 If container will restarting on another instance, then record also updates with new ip address, but with same host name.
 
 ## Settings
+### Created private Hosted Zone
+Create private Hosted Zone in AWS Route53 with same VPC that your EC2 instances and *domain_name*.
+
 ### Configure Task Definition
 Add to yuor "Task Definition" of your ecs application:
 ```
