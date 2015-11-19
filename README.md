@@ -47,5 +47,7 @@ Add to yuor container definition
 
 Before executing discovery service, in your hosted zone will adding record A type:
 
-*[host_name].[domain_name]* --- *[ip_address]*    *Ex. mongo.test.contoso.io --- 172.23.54.22*
+*[host_name].[domain_name]* --- *[ip_address]*    
+
+*Ex. mongo.test.contoso.io --- 172.23.54.22*
 * *ip_address* - ip address of instance where running your application
