@@ -62,7 +62,7 @@ Example:
 *mongo.test.contoso.io --- 172.23.54.22*
 
 ### Configure credentials
-The discovery service needs credentials for correct work. You should set instance policy:
+The discovery service needs credentials for correct work. You should set policy for instance role:
 ```
 {
     "Version": "2012-10-17",
