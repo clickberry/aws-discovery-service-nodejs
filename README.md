@@ -39,8 +39,8 @@ Add to yuor container definition
 }
 ```
 
-*cluster_name* - name of your ecs cluster
-*domain_name* - domain name of your private hosted zone
+* *cluster_name* - name of your ecs cluster
+* *domain_name* - domain name of your private hosted zone
 *host_name* - host name for your container application
 *region* - region of your VPC (Virtual Private Clouds)
 *service_name* - name of your ecs service
